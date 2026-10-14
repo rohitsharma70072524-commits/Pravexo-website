@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#071a2c" />
+  <title>PRAVEXO | AI & Business Systems</title>
+  <meta name="description" content="PRAVEXO helps ambitious businesses build stronger brand presence, generate qualified enquiries, improve follow-up and scale smarter with AI-powered business systems." />
+  <meta property="og:title" content="PRAVEXO — People. Process. Growth." />
+  <meta property="og:description" content="AI-powered brand, demand and business systems for ambitious businesses in Lucknow and beyond." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/pravexo-hero-abstract.png" />
+  <meta name="robots" content="index,follow" />
+  <style>
+    :root {
+      --navy: #071a2c;
+      --navy-2: #0b2639;
+      --teal: #13b7a0;
+      --teal-dark: #007f77;
+      --gold: #d7b77c;
+      --paper: #f5f2ec;
+      --paper-2: #e9e4d9;
+      --ink: #102334;
+      --muted: #60717d;
+      --white: #ffffff;
+      --line: rgba(11, 38, 57, .14);
+      --radius: 22px;
+      --shadow: 0 22px 70px rgba(2, 17, 30, .12);
+      --max: 1180px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    button, input, textarea, select { font: inherit; }
+    .container { width: min(var(--max), calc(100% - 44px)); margin: 0 auto; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 10px; color: var(--teal-dark); font-size: .74rem; font-weight: 800; letter-spacing: .17em; text-transform: uppercase; }
+    .eyebrow::before { content: ""; width: 27px; height: 1px; background: currentColor; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1, h2, .serif { font-family: Georgia, "Times New Roman", serif; font-weight: 500; letter-spacing: -.035em; }
+    h1 { font-size: clamp(3rem, 6.7vw, 5.9rem); line-height: .99; max-width: 800px; margin: 25px 0; }
+    h2 { font-size: clamp(2.25rem, 4.5vw, 3.8rem); line-height: 1.05; margin: 18px 0 22px; }
+    h3 { line-height: 1.25; }
+    .accent { color: var(--teal); }
+    .gold { color: var(--gold); }
+    .muted { color: var(--muted); }
+    .section { padding: 104px 0; }
+    .section-head { max-width: 730px; margin-bottom: 44px; }
+    .section-head p { font-size: 1.08rem; color: var(--muted); max-width: 620px; }
+    .button { display: inline-flex; align-items: center; justify-content: center; gap: 11px; min-height: 52px; padding: 0 23px; border-radius: 999px; background: var(--teal); color: #032b2a; font-weight: 800; border: 1px solid var(--teal); transition: transform .2s ease, background .2s ease, box-shadow .2s ease; cursor: pointer; }
+    .button:hover { transform: translateY(-2px); background: #34d5bb; box-shadow: 0 12px 28px rgba(19,183,160,.2); }
+    .button.dark { background: var(--navy); color: white; border-color: var(--navy); }
+    .button.dark:hover { background: #103651; }
+    .button.ghost { background: transparent; color: inherit; border-color: rgba(255,255,255,.32); }
+    .button.ghost:hover { background: rgba(255,255,255,.08); }
+    .arrow { font-size: 1.1rem; }
+
+    /* Navigation */
+    .nav-wrap { position: sticky; top: 0; z-index: 20; background: rgba(245,242,236,.92); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(11,38,57,.08); }
+    .nav { min-height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .brand { display: flex; align-items: center; gap: 12px; font-size: 1.2rem; letter-spacing: .13em; font-weight: 900; }
+    .brand-mark { width: 36px; height: 36px; border-radius: 11px; display: grid; place-items: center; background: var(--navy); color: var(--gold); font-family: Georgia, serif; font-size: 1.5rem; letter-spacing: -.07em; box-shadow: inset 0 0 0 1px rgba(215,183,124,.5); }
+    .brand small { display: block; color: var(--muted); letter-spacing: .12em; font-size: .52rem; font-weight: 700; margin-top: -2px; }
+    .nav-links { display: flex; align-items: center; gap: 28px; font-size: .88rem; font-weight: 700; color: #3f5360; }
+    .nav-links a:hover { color: var(--teal-dark); }
+    .nav-links .mobile-cta { display: none; }
+    .nav .button { min-height: 44px; padding: 0 18px; font-size: .85rem; }
+    .menu-toggle { display: none; background: none; border: 0; font-size: 1.6rem; color: var(--navy); }
+
+    /* Hero */
+    .hero { position: relative; overflow: hidden; background: var(--navy); color: white; isolation: isolate; }
+    .hero::before { content: ""; position: absolute; inset: 0; z-index: -2; background: linear-gradient(90deg, rgba(4,18,32,.98) 0%, rgba(4,18,32,.92) 43%, rgba(4,18,32,.35) 100%), url('assets/pravexo-hero-abstract.png') center right / cover no-repeat; opacity: 1; }
+    .hero::after { content: ""; position: absolute; z-index: -1; right: -100px; top: -140px; width: 500px; height: 500px; border: 1px solid rgba(19,183,160,.23); border-radius: 50%; box-shadow: 0 0 0 55px rgba(19,183,160,.035), 0 0 0 110px rgba(19,183,160,.025); }
+    .hero-grid { min-height: 680px; padding: 90px 0 88px; display: grid; grid-template-columns: 1.08fr .92fr; gap: 50px; align-items: center; }
+    .hero .eyebrow { color: var(--gold); }
+    .hero h1 { max-width: 720px; }
+    .hero h1 .line { color: var(--teal); display: block; }
+    .hero-copy { max-width: 610px; color: #d0dbe2; font-size: clamp(1rem, 1.6vw, 1.18rem); }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 13px; margin-top: 32px; }
+    .hero-proof { display: flex; align-items: center; gap: 13px; margin-top: 38px; color: #a6b5bf; font-size: .82rem; }
+    .proof-line { width: 42px; height: 1px; background: var(--gold); }
+    .logo-plaque { position: relative; border: 1px solid rgba(215,183,124,.38); border-radius: 8px; padding: 10px; background: rgba(244,240,231,.08); box-shadow: 0 25px 80px rgba(0,0,0,.35); transform: rotate(1.2deg); }
+    .logo-plaque img { width: 100%; display: block; border-radius: 3px; }
+    .plaque-caption { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 13px 6px 3px; font-size: .68rem; color: #d0dbe2; letter-spacing: .12em; text-transform: uppercase; }
+    .plaque-caption span:last-child { color: var(--gold); }
+    .hero-bottom { background: rgba(255,255,255,.045); border-top: 1px solid rgba(255,255,255,.1); }
+    .hero-bottom-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 20px 0; color: #bcc8d0; font-size: .76rem; letter-spacing: .13em; text-transform: uppercase; }
+    .hero-bottom strong { color: var(--gold); font-weight: 600; }
+
+    /* Statement */
+    .statement-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 80px; align-items: start; }
+    .statement-kicker { color: var(--teal-dark); font-size: .8rem; text-transform: uppercase; letter-spacing: .13em; font-weight: 800; }
+    .statement-copy { font-size: clamp(1.15rem, 2vw, 1.55rem); max-width: 760px; line-height: 1.55; }
+    .statement-copy strong { color: var(--navy); }
+    .statement-note { border-left: 2px solid var(--gold); padding: 6px 0 6px 20px; color: var(--muted); margin-top: 28px; font-size: .95rem; }
+
+    /* Services */
+    .services { background: #eae6dd; }
+    .service-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .service-card { background: rgba(255,255,255,.62); border: 1px solid rgba(7,26,44,.1); border-radius: var(--radius); padding: 30px; min-height: 250px; transition: transform .22s ease, box-shadow .22s ease; }
+    .service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+    .service-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; margin-bottom: 25px; }
+    .service-num { font-size: .74rem; letter-spacing: .16em; color: var(--teal-dark); font-weight: 900; }
+    .service-icon { width: 45px; height: 45px; border: 1px solid rgba(0,127,119,.25); color: var(--teal-dark); display: grid; place-items: center; border-radius: 14px; font-size: 1.1rem; }
+    .service-card h3 { font-family: Georgia, serif; font-size: 1.65rem; font-weight: 500; letter-spacing: -.025em; margin: 0 0 10px; }
+    .service-card p { color: var(--muted); margin-bottom: 18px; }
+    .tag-list { display: flex; flex-wrap: wrap; gap: 7px; }
+    .tag { border: 1px solid rgba(7,26,44,.13); color: #334b5a; border-radius: 100px; font-size: .72rem; padding: 5px 10px; }
+
+    /* System */
+    .system { background: var(--navy); color: white; position: relative; overflow: hidden; }
+    .system .section-head p { color: #aebdc8; }
+    .system .eyebrow { color: var(--gold); }
+    .system-flow { display: grid; grid-template-columns: repeat(5, 1fr); border: 1px solid rgba(255,255,255,.16); border-radius: 18px; overflow: hidden; }
+    .flow-step { min-height: 190px; padding: 25px 20px; border-right: 1px solid rgba(255,255,255,.16); background: rgba(255,255,255,.025); }
+    .flow-step:last-child { border-right: 0; }
+    .flow-step .number { color: var(--gold); font-size: .76rem; letter-spacing: .16em; font-weight: 800; }
+    .flow-step h3 { font-size: 1.03rem; margin: 20px 0 8px; }
+    .flow-step p { margin: 0; color: #aebdc8; font-size: .83rem; }
+    .system-foot { display: flex; justify-content: space-between; align-items: center; gap: 30px; margin-top: 32px; padding-top: 25px; border-top: 1px solid rgba(255,255,255,.13); }
+    .system-foot p { margin: 0; max-width: 700px; color: #c6d1d9; }
+
+    /* Sectors */
+    .sector-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .sector-card { min-height: 260px; display: flex; flex-direction: column; justify-content: space-between; padding: 24px; border-radius: 18px; color: white; background: var(--navy); position: relative; overflow: hidden; isolation: isolate; }
+    .sector-card::before { content: ""; position: absolute; z-index: -1; width: 180px; height: 180px; right: -68px; bottom: -75px; border: 1px solid rgba(19,183,160,.45); border-radius: 50%; box-shadow: 0 0 0 25px rgba(19,183,160,.05), 0 0 0 50px rgba(19,183,160,.035); }
+    .sector-card:nth-child(2) { background: #13364a; }
+    .sector-card:nth-child(3) { background: #0a423f; }
+    .sector-card:nth-child(4) { background: #1c2b3e; }
+    .sector-num { color: var(--gold); font-size: .73rem; letter-spacing: .14em; font-weight: 800; }
+    .sector-card h3 { font-family: Georgia, serif; font-size: 1.55rem; font-weight: 500; margin: 34px 0 10px; }
+    .sector-card p { color: #c0cdd5; font-size: .86rem; margin: 0; }
+    .sector-note { color: var(--muted); font-size: .87rem; margin-top: 18px; }
+
+    /* Difference */
+    .difference { background: #eae6dd; }
+    .difference-grid { display: grid; grid-template-columns: .95fr 1.05fr; gap: 70px; align-items: start; }
+    .difference-lead { font-family: Georgia, serif; font-size: clamp(1.9rem, 3.5vw, 3rem); line-height: 1.14; letter-spacing: -.03em; }
+    .difference-list { border-top: 1px solid var(--line); }
+    .difference-row { display: grid; grid-template-columns: 42px 1fr; gap: 16px; padding: 22px 0; border-bottom: 1px solid var(--line); }
+    .difference-row .n { color: var(--teal-dark); font-size: .76rem; font-weight: 900; letter-spacing: .1em; padding-top: 3px; }
+    .difference-row h3 { margin: 0 0 6px; font-size: 1rem; }
+    .difference-row p { margin: 0; color: var(--muted); font-size: .9rem; }
+
+    /* CTA */
+    .contact { background: var(--paper); }
+    .contact-panel { border-radius: 28px; padding: clamp(28px, 5vw, 62px); display: grid; grid-template-columns: 1fr .8fr; gap: 60px; color: white; background: linear-gradient(120deg, rgba(7,26,44,.98), rgba(7,26,44,.88)), url('assets/pravexo-hero-abstract.png') center / cover; overflow: hidden; box-shadow: var(--shadow); }
+    .contact-panel .eyebrow { color: var(--gold); }
+    .contact-panel h2 { max-width: 650px; }
+    .contact-panel p { color: #becbd4; max-width: 630px; }
+    .contact-form { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.16); padding: 24px; border-radius: 18px; align-self: center; }
+    .field { display: grid; gap: 7px; margin-bottom: 15px; }
+    .field label { font-size: .76rem; color: #d2dce2; font-weight: 700; }
+    .field input, .field select, .field textarea { width: 100%; border: 1px solid rgba(255,255,255,.18); background: rgba(1,13,24,.45); color: white; outline: none; border-radius: 9px; padding: 12px 13px; }
+    .field select option { color: var(--navy); }
+    .field input:focus, .field select:focus, .field textarea:focus { border-color: var(--teal); }
+    .field textarea { resize: vertical; min-height: 84px; }
+    .form-note { color: #96a9b6; font-size: .72rem; margin: 13px 0 0; }
+    .form-status { margin: 10px 0 0; font-size: .82rem; color: var(--gold); min-height: 1.2em; }
+
+    footer { background: #051321; color: white; padding: 32px 0; }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 22px; }
+    .footer-brand { display: flex; flex-direction: column; gap: 4px; }
+    .footer-brand strong { letter-spacing: .16em; }
+    .footer-brand span, .footer-links { color: #9aabb7; font-size: .76rem; }
+    .footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
+    .footer-links a:hover { color: var(--teal); }
+    .fine-print { font-size: .69rem; color: #718491; margin-top: 22px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,.09); }
+
+    @media (max-width: 980px) {
+      .hero-grid { grid-template-columns: 1fr .78fr; gap: 30px; }
+      .hero h1 { font-size: clamp(3rem, 6.7vw, 4.6rem); }
+      .statement-grid, .difference-grid { gap: 42px; }
+      .sector-grid { grid-template-columns: repeat(2, 1fr); }
+      .system-flow { grid-template-columns: repeat(3, 1fr); }
+      .flow-step:nth-child(3) { border-right: 0; }
+      .flow-step:nth-child(n+4) { border-top: 1px solid rgba(255,255,255,.16); }
+      .contact-panel { gap: 28px; }
+    }
+    @media (max-width: 720px) {
+      .container { width: min(100% - 30px, var(--max)); }
+      .section { padding: 72px 0; }
+      .nav { min-height: 68px; }
+      .nav-links { display: none; position: absolute; left: 15px; right: 15px; top: 68px; padding: 22px; background: var(--paper); border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--shadow); flex-direction: column; align-items: stretch; gap: 18px; }
+      .nav-links.open { display: flex; }
+      .nav-links .mobile-cta { display: block; }
+      .nav > .button { display: none; }
+      .menu-toggle { display: block; }
+      .hero::before { background: linear-gradient(180deg, rgba(4,18,32,.96), rgba(4,18,32,.9)), url('assets/pravexo-hero-abstract.png') center / cover no-repeat; }
+      .hero-grid { min-height: auto; padding: 70px 0 54px; grid-template-columns: 1fr; gap: 36px; }
+      h1 { font-size: clamp(3rem, 14vw, 4.3rem); }
+      .hero h1 { font-size: clamp(3rem, 12.5vw, 4.2rem); }
+      .logo-plaque { max-width: 510px; transform: none; }
+      .hero-bottom-inner { align-items: flex-start; flex-direction: column; gap: 8px; font-size: .68rem; }
+      .statement-grid, .difference-grid { grid-template-columns: 1fr; gap: 24px; }
+      .service-grid { grid-template-columns: 1fr; }
+      .service-card { min-height: 0; padding: 25px; }
+      .system-flow { grid-template-columns: 1fr; }
+      .flow-step, .flow-step:nth-child(3) { min-height: 0; border-right: 0; border-top: 1px solid rgba(255,255,255,.16); }
+      .flow-step:first-child { border-top: 0; }
+      .flow-step h3 { margin-top: 10px; }
+      .system-foot { align-items: flex-start; flex-direction: column; }
+      .sector-grid { grid-template-columns: 1fr; }
+      .sector-card { min-height: 210px; }
+      .contact-panel { grid-template-columns: 1fr; padding: 28px 22px; gap: 25px; }
+      .contact-form { padding: 18px; }
+      .footer-inner { align-items: flex-start; flex-direction: column; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; } }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "PRAVEXO",
+    "description": "AI & Business Systems: brand growth, demand generation, customer conversion and business automation.",
+    "areaServed": "Lucknow, Uttar Pradesh, India",
+    "knowsAbout": ["Brand strategy", "Creative production", "Lead generation", "AI automation", "Customer relationship workflows"]
+  }
+  </script>
+</head>
+<body>
+  <div class="nav-wrap">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="#top" aria-label="PRAVEXO home">
+        <span class="brand-mark">P</span>
+        <span>PRAVEXO<small>AI & BUSINESS SYSTEMS</small></span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#approach">Our approach</a>
+        <a href="#services">What we build</a>
+        <a href="#industries">Industries</a>
+        <a href="#process">How it works</a>
+        <a class="button mobile-cta" href="#contact">Request a growth audit <span class="arrow">↗</span></a>
+      </div>
+      <a class="button dark" href="#contact">Request a growth audit <span class="arrow">↗</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    </nav>
+  </div>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">AI & Business Systems · Lucknow, India</div>
+          <h1>Growth needs more than marketing.<span class="line">It needs a system.</span></h1>
+          <p class="hero-copy">PRAVEXO brings brand, demand generation and AI-powered business systems together—so ambitious businesses can create stronger attention, capture more of the right enquiries and follow through with consistency.</p>
+          <div class="hero-actions">
+            <a class="button" href="#contact">Request a growth audit <span class="arrow">↗</span></a>
+            <a class="button ghost" href="#services">Explore what we build <span class="arrow">↓</span></a>
+          </div>
+          <div class="hero-proof"><span class="proof-line"></span><span>PEOPLE <span class="gold">•</span> PROCESS <span class="gold">•</span> GROWTH</span></div>
+        </div>
+        <div class="logo-plaque" aria-label="PRAVEXO brand identity image">
+          <img src="assets/pravexo-logo-exact.jpg" alt="PRAVEXO logo with the descriptor AI & Business Systems and the line People, Process, Growth" />
+          <div class="plaque-caption"><span>Built around business outcomes</span><span>Lucknow · India</span></div>
+        </div>
+      </div>
+      <div class="hero-bottom"><div class="container hero-bottom-inner"><span><strong>01 /</strong> Brand & content systems</span><span><strong>02 /</strong> Demand & conversion</span><span><strong>03 /</strong> AI & operations</span><span><strong>04 /</strong> Retention & experience</span></div></div>
+    </section>
+
+    <section class="section" id="approach">
+      <div class="container statement-grid">
+        <div>
+          <div class="eyebrow">The PRAVEXO point of view</div>
+          <p class="statement-kicker" style="margin-top:20px">Better growth is connected growth.</p>
+        </div>
+        <div>
+          <p class="statement-copy"><strong>A beautiful brand can attract attention.</strong> A well-run business turns that attention into an experience people trust—and a system that follows through.</p>
+          <p class="statement-copy">We connect the pieces that are too often left separate: how a business shows up, how customers discover it, how enquiries are handled, and what happens after the first interaction.</p>
+          <div class="statement-note">We do not sell AI for its own sake. We identify a business bottleneck, design a practical solution, and measure what changes.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services" id="services">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">What we build</div>
+          <h2>Four capabilities.<br><span class="accent">One connected system.</span></h2>
+          <p>Start with the problem that matters most today. Expand into a joined-up growth system when the fundamentals are working.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card">
+            <div class="service-top"><span class="service-num">01 / BRAND PRESENCE</span><span class="service-icon">✳</span></div>
+            <h3>Make the business worth noticing.</h3>
+            <p>Build a sharper, more consistent brand presence across the places customers discover and evaluate you.</p>
+            <div class="tag-list"><span class="tag">Brand positioning</span><span class="tag">Campaign concepts</span><span class="tag">Product visuals</span><span class="tag">Reels & social content</span><span class="tag">Local presence</span></div>
+          </article>
+          <article class="service-card">
+            <div class="service-top"><span class="service-num">02 / DEMAND & CONVERSION</span><span class="service-icon">↗</span></div>
+            <h3>Give attention somewhere to go.</h3>
+            <p>Turn a campaign into a clear next step, and make it easier to capture, understand and act on customer interest.</p>
+            <div class="tag-list"><span class="tag">Campaign strategy</span><span class="tag">Landing pages</span><span class="tag">Lead capture</span><span class="tag">WhatsApp journeys</span><span class="tag">Enquiry tracking</span></div>
+          </article>
+          <article class="service-card">
+            <div class="service-top"><span class="service-num">03 / AI & OPERATIONS</span><span class="service-icon">⌘</span></div>
+            <h3>Reduce the friction behind the scenes.</h3>
+            <p>Use practical automation to streamline repetitive processes and make responses more consistent.</p>
+            <div class="tag-list"><span class="tag">WhatsApp assistants</span><span class="tag">Voice agents</span><span class="tag">Booking workflows</span><span class="tag">CRM integrations</span><span class="tag">Reporting flows</span></div>
+          </article>
+          <article class="service-card">
+            <div class="service-top"><span class="service-num">04 / CUSTOMER EXPERIENCE</span><span class="service-icon">↻</span></div>
+            <h3>Make the next interaction count.</h3>
+            <p>Support a stronger customer journey before, during and after the sale—without losing the human touch.</p>
+            <div class="tag-list"><span class="tag">Follow-up systems</span><span class="tag">Review requests</span><span class="tag">Re-engagement</span><span class="tag">Repeat-customer journeys</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section system" id="process">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Our operating philosophy</div>
+          <h2>Less guesswork.<br><span class="accent">More connected execution.</span></h2>
+          <p>Every engagement starts with the business problem—not with a software tool or a list of trendy services.</p>
+        </div>
+        <div class="system-flow">
+          <div class="flow-step"><span class="number">01 / DISCOVER</span><h3>Understand the bottleneck</h3><p>Clarify the offer, audience, customer journey and current process.</p></div>
+          <div class="flow-step"><span class="number">02 / DESIGN</span><h3>Define the right system</h3><p>Choose the smallest practical solution that addresses the issue.</p></div>
+          <div class="flow-step"><span class="number">03 / BUILD</span><h3>Create and connect</h3><p>Produce the assets, workflow or campaign with clear ownership.</p></div>
+          <div class="flow-step"><span class="number">04 / MEASURE</span><h3>Review real signals</h3><p>Track agreed indicators such as enquiries, response time or usage.</p></div>
+          <div class="flow-step"><span class="number">05 / IMPROVE</span><h3>Refine what works</h3><p>Use evidence to optimise, document and decide what to scale.</p></div>
+        </div>
+        <div class="system-foot"><p>We favour clear scope, human oversight and measurable objectives over grand promises. The outcome depends on the business, the offer and execution.</p><a class="button" href="#contact">Discuss a business challenge <span class="arrow">↗</span></a></div>
+      </div>
+    </section>
+
+    <section class="section" id="industries">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Who we work with</div>
+          <h2>Built for businesses where <span class="accent">every interaction matters.</span></h2>
+          <p>Our systems adapt to the customer journey and operating reality of the business—not the other way around.</p>
+        </div>
+        <div class="sector-grid">
+          <article class="sector-card"><span class="sector-num">01 / RETAIL</span><div><h3>Retail & premium products</h3><p>Product storytelling, collection campaigns, WhatsApp enquiries and repeat-customer journeys.</p></div></article>
+          <article class="sector-card"><span class="sector-num">02 / HOSPITALITY</span><div><h3>Hotels & hospitality</h3><p>Property-led creative, seasonal offers, direct enquiry paths and guest communication.</p></div></article>
+          <article class="sector-card"><span class="sector-num">03 / PROPERTY</span><div><h3>Real estate</h3><p>Property presentation, lead capture, qualification and structured follow-up.</p></div></article>
+          <article class="sector-card"><span class="sector-num">04 / SERVICES</span><div><h3>Clinics & service businesses</h3><p>Local visibility, appointment journeys, enquiry handling and reputation workflows.</p></div></article>
+        </div>
+        <p class="sector-note">Our initial go-to-market focus is campaign-led growth for selected Lucknow businesses. Engagements are scoped according to fit, capacity and the outcome being pursued.</p>
+      </div>
+    </section>
+
+    <section class="section difference">
+      <div class="container difference-grid">
+        <div>
+          <div class="eyebrow">Why PRAVEXO</div>
+          <p class="difference-lead" style="margin-top:22px">Technology is useful only when it makes a real business process better.</p>
+          <p class="muted" style="max-width:440px">We bring strategic thinking, creative execution and practical systems into one conversation—with the business objective kept in view.</p>
+          <a class="button dark" href="#contact">Start with a business problem <span class="arrow">↗</span></a>
+        </div>
+        <div class="difference-list">
+          <div class="difference-row"><div class="n">01</div><div><h3>Outcomes before tools</h3><p>We begin by understanding what needs to improve before recommending a platform or workflow.</p></div></div>
+          <div class="difference-row"><div class="n">02</div><div><h3>Designed around the customer</h3><p>Brand, campaign and follow-up should feel like parts of the same experience.</p></div></div>
+          <div class="difference-row"><div class="n">03</div><div><h3>Built for real operations</h3><p>Scope, team capacity, data access and day-to-day use matter as much as the initial build.</p></div></div>
+          <div class="difference-row"><div class="n">04</div><div><h3>Measured, then improved</h3><p>We agree what to track, establish a starting point and review results without inventing guarantees.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="contact-panel">
+          <div>
+            <div class="eyebrow">Start a conversation</div>
+            <h2>Let's find the next growth opportunity in your business.</h2>
+            <p>Tell us what the business is trying to achieve—and what is getting in the way. We will use that context to frame a focused first conversation.</p>
+            <p style="font-size:.85rem">PRAVEXO · AI & Business Systems<br><span class="gold">People • Process • Growth</span></p>
+          </div>
+          <form class="contact-form" id="leadForm">
+            <div class="field"><label for="name">Your name</label><input id="name" name="name" placeholder="Full name" required autocomplete="name" /></div>
+            <div class="field"><label for="business">Business name</label><input id="business" name="business" placeholder="Company or business" required autocomplete="organization" /></div>
+            <div class="field"><label for="need">What would you like to improve?</label><select id="need" name="need" required><option value="" disabled selected>Select one</option><option>Brand & content</option><option>More qualified enquiries</option><option>WhatsApp / AI automation</option><option>Customer follow-up & retention</option><option>Not sure yet — need a growth audit</option></select></div>
+            <div class="field"><label for="context">A little context (optional)</label><textarea id="context" name="context" placeholder="What is the biggest bottleneck right now?"></textarea></div>
+            <button class="button" type="submit" style="width:100%">Prepare my enquiry <span class="arrow">↗</span></button>
+            <p class="form-note">Before launch, connect the form to your official WhatsApp number or a form service. See README for the one-line configuration.</p>
+            <p class="form-status" id="formStatus" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand"><strong>PRAVEXO</strong><span>AI & Business Systems · People • Process • Growth</span></div>
+        <div class="footer-links"><a href="#approach">Approach</a><a href="#services">Services</a><a href="#industries">Industries</a><a href="#contact">Contact</a><a href="#top">Back to top ↑</a></div>
+      </div>
+      <div class="fine-print">© <span id="year"></span> PRAVEXO. All rights reserved. Services are scoped to each business; results depend on the offer, market, implementation and client-side execution.</div>
+    </div>
+  </footer>
+
+  <script>
+    // LAUNCH CONFIG: replace this with PRAVEXO's real WhatsApp number in international format, digits only.
+    // Example format: 919876543210 (do not include +, spaces or hyphens).
+    const PRAVEXO_WHATSAPP_NUMBER = "91XXXXXXXXXX";
+
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    menuToggle.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', String(open));
+      menuToggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+      menuToggle.textContent = open ? '×' : '☰';
+    });
+    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      navLinks.classList.remove('open'); menuToggle.setAttribute('aria-expanded', 'false'); menuToggle.textContent = '☰';
+    }));
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('leadForm').addEventListener('submit', (event) => {
+      event.preventDefault();
+      const status = document.getElementById('formStatus');
+      const data = new FormData(event.currentTarget);
+      const message = [
+        'Hello PRAVEXO — I would like to discuss a growth audit.',
+        `Name: ${data.get('name')}`,
+        `Business: ${data.get('business')}`,
+        `Focus: ${data.get('need')}`,
+        data.get('context') ? `Context: ${data.get('context')}` : ''
+      ].filter(Boolean).join('\n');
+      if (!/^\d{10,15}$/.test(PRAVEXO_WHATSAPP_NUMBER)) {
+        status.textContent = 'Launch setup needed: replace the placeholder WhatsApp number in index.html before publishing.';
+        return;
+      }
+      window.open(`https://wa.me/${PRAVEXO_WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer');
+      status.textContent = 'Your enquiry is prepared in WhatsApp. Please send the message to complete the request.';
+    });
+  </script>
+</body>
+</html>
